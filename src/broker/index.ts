@@ -90,6 +90,7 @@ export default function createBroker(VirtualList: IVirtualList): IVirtualList {
               if (draggableEvents.some(n => n in e)) {
                 this.$emit('input', draggablePolicy.updatedSources(
                   e, this.vlsPolicy.draggingRealIndex));
+                this.$emit('change', e);
               }
             },
 

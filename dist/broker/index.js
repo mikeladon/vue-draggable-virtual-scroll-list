@@ -82,6 +82,7 @@ export default function createBroker(VirtualList) {
                         change: function (e) {
                             if (draggableEvents.some(function (n) { return n in e; })) {
                                 _this.$emit('input', draggablePolicy.updatedSources(e, _this.vlsPolicy.draggingRealIndex));
+                                _this.$emit('change', e);
                             }
                         } }, sortableEventHandlers(this)), { start: function (e) {
                             _this.vlsPolicy.onDragStart(e, _this.range, slots);
