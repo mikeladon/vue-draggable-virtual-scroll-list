@@ -88,8 +88,6 @@ export default function createBroker(VirtualList) {
                             _this.$emit('start', e);
                         }, end: function (e) {
                             _this.vlsPolicy.onDragEnd();
-                            _this.$emit('end', e);
-                            _this.$emit('foo', e);
                         } }),
                     attrs: this.$attrs,
                 }, slots),
