@@ -101,7 +101,7 @@ export default function createBroker(VirtualList: IVirtualList): IVirtualList {
               this.$emit('start', e);
             },
 
-            end: (e: Event) => {
+            end: (e: DraggableEvent<T>) => {
               this.vlsPolicy.onDragEnd();
               this.$emit('end', e);
             }
