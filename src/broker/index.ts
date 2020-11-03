@@ -88,8 +88,7 @@ export default function createBroker(VirtualList: IVirtualList): IVirtualList {
             // Convert Draggable's change events to input events.
             change: (e: DraggableEvent<T>) => {
               if (draggableEvents.some(n => n in e)) {
-                this.$emit('input', draggablePolicy.updatedSources(
-                  e, this.vlsPolicy.draggingRealIndex), e);
+                this.$emit('input', e);
               }
             },
 
